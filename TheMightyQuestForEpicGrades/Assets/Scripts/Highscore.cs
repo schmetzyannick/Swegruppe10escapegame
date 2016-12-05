@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using Assets.Scripts;
 using UnityEngine.SceneManagement;
+using System;
 
 public class Highscore : MonoBehaviour {
 
@@ -26,4 +27,8 @@ public class Highscore : MonoBehaviour {
         SceneManager.LoadScene(level);
     }
 
+    public static implicit operator Text(Highscore v)
+    {
+        throw new NotImplementedException();
+    }
 }
