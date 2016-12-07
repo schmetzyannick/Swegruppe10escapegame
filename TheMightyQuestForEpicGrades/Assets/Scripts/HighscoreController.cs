@@ -69,12 +69,13 @@ public class HighscoreController : MonoBehaviour {
             int height = 20;
             int width = 505;
             int platz = 1;
+            GUI.contentColor = Color.white;
 
             //erzeuge Labels an der stelle wo immoment die Textfelder stehen
             for (int i=0;i<10;i++)
             {
                 string str = platz + ". " + highscoreliste[i].name + "\t" + highscoreliste[i].score + "\t" + highscoreliste[i].zeit;
-                GUI.Label(new Rect(x, y, width, height), str);
+                GUI.Label(new Rect(x, y, width, height), str, "color");
                 platz++;
                 y -= 28;
             }
@@ -90,12 +91,14 @@ public class HighscoreController : MonoBehaviour {
             int height = 20;
             int width = 505;
             int platz = 1;
+            GUI.contentColor = Color.white;
 
             //erzeuge Labels an der stelle wo immoment die Textfelder stehen
             for (int i = 0; i < anzahl; i++)
             {
                 string str = platz + ". " + highscoreliste[i].name + "\t" + highscoreliste[i].score + "\t" + highscoreliste[i].zeit;
-                GUI.Label(new Rect(x, y, width, height), str);
+                
+                GUI.Label(new Rect(x, y, width, height), str,"color");
                 platz++;
                 y -= 28;
             }
@@ -103,7 +106,7 @@ public class HighscoreController : MonoBehaviour {
             for (int k=0;k<anzahl;k++)
             {
                 string str = platz + ". ";
-                GUI.Label(new Rect(x, y, width, height), str);
+                GUI.Label(new Rect(x, y, width, height), str, "color");
                 platz++;
                 y -= 28;
             }
